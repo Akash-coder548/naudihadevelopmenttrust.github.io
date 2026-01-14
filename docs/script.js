@@ -1,4 +1,4 @@
-fetch("PASTE_YOUR_GOOGLE_SHEET_WEBAPP_URL")
+fetch("https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g/edit?usp=sharing")
 .then(res => res.text())
 .then(total => document.getElementById("total").innerText = total);
 
