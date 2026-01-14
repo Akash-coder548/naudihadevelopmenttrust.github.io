@@ -1,4 +1,4 @@
-fetch("https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g/edit?usp=sharing")
+fetch("https://script.google.com/macros/s/AKfycbyugOy04Zqeil7w_J1AGRpxj7Frxz4hmguITTzQF4MUWmV27XchHoFNMhOV3fcB03sATw/exec")
 .then(res => res.text())
 .then(total => document.getElementById("total").innerText = total);
 
