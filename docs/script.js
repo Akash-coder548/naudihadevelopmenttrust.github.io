@@ -1,34 +1,6 @@
-fetch("https://script.google.com/macros/s/AKfycbyugOy04Zqeil7w_J1AGRpxj7Frxz4hmguITTzQF4MUWmV27XchHoFNMhOV3fcB03sATw/exec")
-.then(res => res.text())
-.then(total => document.getElementById("total").innerText = total);
+fetch("PASTE_YOUR_WEBAPP_URL")
+.then(r=>r.text())
+.then(t=>document.getElementById("total").innerText=t);
 
-const text = {
-  en:{
-    aboutTitle:"About Our Trust",
-    aboutText:"Naudiha Development Trust works for village development, educating children for a better future, and improving infrastructure such as roads, water, health and cleanliness.",
-    improveTitle:"How We Can Improve Our Village",
-    donateTitle:"Donation",
-    teamTitle:"Trust Members",
-    newsTitle:"Recent News",
-    eventsTitle:"Recent Events",
-    mapTitle:"Our Village Location",
-    suggestTitle:"Suggestion Box"
-  },
-  hi:{
-    aboutTitle:"हमारा ट्रस्ट",
-    aboutText:"नौडीहा विकास ट्रस्ट गांव के विकास, बच्चों को बेहतर भविष्य के लिए शिक्षित करने तथा सड़क, पानी, स्वास्थ्य और स्वच्छता जैसी सुविधाओं में सुधार के लिए कार्य करता है।",
-    improveTitle:"हम अपने गांव को कैसे सुधार सकते हैं",
-    donateTitle:"दान",
-    teamTitle:"ट्रस्ट सदस्य",
-    newsTitle:"ताज़ा समाचार",
-    eventsTitle:"हाल की गतिविधियाँ",
-    mapTitle:"हमारे गांव का स्थान",
-    suggestTitle:"सुझाव बॉक्स"
-  }
-};
-
-function setLang(lang){
-  document.querySelectorAll("[data-key]").forEach(el=>{
-    el.innerText = text[lang][el.dataset.key];
-  });
-}
+const text={en:{aboutTitle:"About Our Trust",aboutText:"Naudiha Development Trust works for village development, educating children and improving infrastructure.",improveTitle:"How We Can Improve Our Village",donateTitle:"Donation",teamTitle:"Trust Members",eventsTitle:"Recent Events",mapTitle:"Our Location"},hi:{aboutTitle:"हमारा ट्रस्ट",aboutText:"नौडीहा विकास ट्रस्ट गांव के विकास और बच्चों की शिक्षा के लिए कार्य करता है।",improveTitle:"गांव सुधार",donateTitle:"दान",teamTitle:"ट्रस्ट सदस्य",eventsTitle:"गतिविधियाँ",mapTitle:"स्थान"}};
+function setLang(l){document.querySelectorAll("[data-key]").forEach(e=>e.innerText=text[l][e.dataset.key]);}

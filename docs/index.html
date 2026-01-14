@@ -8,6 +8,15 @@
 </head>
 <body>
 
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="./auth.js"></script>
+<script>
+    firebase.auth().onAuthStateChanged(u=>{
+      if(!u) location.href="login.html";
+    });
+</script>
+
 <div class="lang">
     <button onclick="setLang('en')">English</button>
     <button onclick="setLang('hi')">हिन्दी</button>
@@ -19,81 +28,46 @@
     <p>Building a Better Village Together</p>
 </header>
 
-<div class="thanks">
-    🙏 Many thanks to everyone for your support to Naudiha Development Trust 🙏
-</div>
+<div class="thanks">🙏 Many thanks to everyone for your support 🙏</div>
 
 <section>
     <h2 data-key="aboutTitle">About Our Trust</h2>
-    <p data-key="aboutText">
-        Naudiha Development Trust works for village development, educating children for a better future,
-        and improving infrastructure such as roads, water, health and cleanliness.
-    </p>
+    <p data-key="aboutText">Naudiha Development Trust works for village development, educating children and improving infrastructure.</p>
 </section>
 
 <section>
     <h2 data-key="improveTitle">How We Can Improve Our Village</h2>
     <ul>
-        <li>Cleanliness</li>
-        <li>School support</li>
-        <li>Improving infrastructure</li>
-        <li>Road and water improvement</li>
+        <li>Cleanliness</li><li>School support</li><li>Infrastructure</li><li>Road & Water</li>
     </ul>
 </section>
 
-<section>
-    <h2 data-key="donateTitle">Donation</h2>
-    <img src="./qr.png" class="qr">
-    <h3>Total Donation: ₹ <span id="total">0</span></h3>
+<section class="donate-box">
+    <div><img src="./qr.png" class="qr-big"></div>
+    <div>
+        <h2 data-key="donateTitle">Donation</h2>
+        <h3>₹ <span id="total">0</span></h3>
+        <a class="sheet-link" href="https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g/request" target="_blank">Request Sheet Access</a>
+    </div>
 </section>
 
 <section>
     <h2 data-key="teamTitle">Trust Members</h2>
     <ul class="team">
-        <li>Chief Coordinator – Nitish Kumar – 📞 +917970553182</li>
-        <li>Member – Himanshu Ranjan – 📞 +917033336559</li>
-        <li>Member – Sonu Kumar – 📞 +916206792903</li>
-        <li>Member – Ankit Kumar – 📞 +918709809484</li>
-        <li>Member – Jitendra Kumar – 📞 +917738289950</li>
+        <li>Nitish Kumar</li><li>Himanshu Ranjan</li><li>Sonu Kumar</li><li>Ankit Kumar</li><li>Jitendra Kumar</li>
     </ul>
-</section>
-
-<section>
-    <h2>Join Our WhatsApp Group</h2>
-    <a href="WHATSAPP_LINK" class="btn">Join Group</a>
-</section>
-
-<section>
-    <h2 data-key="newsTitle">Recent News</h2>
-    <p>Chhath Puja 2025</p>
-    <p>Kisan Credit Card (KCC) Completed</p>
 </section>
 
 <section>
     <h2 data-key="eventsTitle">Recent Events</h2>
     <div class="gallery">
-        <img src="./event1.jpg">
-        <img src="./event2.jpg">
-        <img src="./event3.jpg">
+        <img src="./event1.jpg"><img src="./event2.jpg"><img src="./event3.jpg">
     </div>
 </section>
 
 <section>
-    <h2 data-key="mapTitle">Our Village Location</h2>
-    <iframe
-            src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"
-            class="map"
-            loading="lazy">
-    </iframe>
-</section>
-
-<section>
-    <h2 data-key="suggestTitle">Suggestion Box</h2>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <input name="name" placeholder="Your Name" required>
-        <textarea name="message" placeholder="Your suggestion..." required></textarea>
-        <button>Send Suggestion</button>
-    </form>
+    <h2 data-key="mapTitle">Our Location</h2>
+    <iframe class="map" src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"></iframe>
 </section>
 
 <footer>© 2026 Naudiha Development Trust</footer>

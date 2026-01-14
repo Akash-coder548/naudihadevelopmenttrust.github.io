@@ -1,16 +1,13 @@
-body { margin:0; font-family:Arial; background:#f5f5f5; }
-header { background:#2e7d32; color:white; text-align:center; padding:20px; }
-.logo { width:120px; }
-.thanks { background:#fff3cd; text-align:center; padding:10px; font-weight:bold; }
-section { background:white; margin:15px; padding:15px; border-radius:10px; }
-.qr { width:200px; max-width:90%; }
-.team li { margin:5px 0; }
-.btn { background:#2e7d32; color:white; padding:10px 20px; display:inline-block; border-radius:5px; text-decoration:none; }
-input, textarea, button { width:100%; margin:8px 0; padding:10px; }
-button { background:#2e7d32; color:white; border:none; }
-.gallery { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
-.gallery img { width:100%; border-radius:10px; }
-.map { width:100%; height:300px; border:0; border-radius:10px; }
-footer { background:#222; color:white; text-align:center; padding:10px; }
-.lang { text-align:right; padding:10px; }
-.lang button { background:#2e7d32; color:white; border:none; padding:6px 12px; border-radius:5px; }
+body{margin:0;font-family:Arial;background:#f5f5f5}
+header{background:#2e7d32;color:white;text-align:center;padding:20px}
+.logo{width:120px}
+.thanks{text-align:center;background:#fff3cd;padding:10px}
+section{background:white;margin:15px;padding:15px;border-radius:10px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.gallery img{width:100%;border-radius:10px}
+.map{width:100%;height:300px;border:0;border-radius:10px}
+.lang{text-align:right;padding:10px}
+.lang button{background:#2e7d32;color:white;border:none;padding:6px 12px;border-radius:5px}
+.donate-box{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.qr-big{width:100%;max-width:280px}
+.sheet-link{display:block;margin-top:10px;color:#2e7d32;font-weight:bold}

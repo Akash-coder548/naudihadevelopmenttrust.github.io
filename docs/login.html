@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Naudiha Trust Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        body{
+          background:url("./logo.png") center center repeat;
+          background-size:200px;
+          background-color:#e8f5e9;
+        }
+        .overlay{
+          min-height:100vh;
+          background:rgba(255,255,255,0.85);
+          display:flex;
+          flex-direction:column;
+          align-items:center;
+        }
+        .logo-top{
+          width:120px;
+          margin-top:25px;
+        }
+        .login-box{
+          margin-top:30px;
+          background:white;
+          width:90%;
+          max-width:360px;
+          padding:25px;
+          border-radius:15px;
+          box-shadow:0 12px 40px rgba(0,0,0,.35);
+          animation:fadeIn .6s;
+        }
+        .login-box h2{text-align:center;color:#2e7d32}
+        .login-box input{
+          width:100%;
+          padding:12px;
+          margin:10px 0;
+          border-radius:8px;
+          border:1px solid #ccc;
+        }
+        .login-box button{
+          width:100%;
+          padding:12px;
+          margin:10px 0;
+          border:none;
+          border-radius:8px;
+          background:#2e7d32;
+          color:white;
+          font-size:16px;
+        }
+        .google-btn{
+          background:#db4437;
+        }
+        @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+    </style>
+</head>
+
+<body>
+
+<div class="overlay">
+    <img src="./logo.png" class="logo-top">
+
+    <div class="login-box">
+        <h2>Naudiha Development Trust</h2>
+
+        <input id="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+        <button onclick="signup()">Create New Account</button>
+        <button class="google-btn" onclick="googleLogin()">Continue with Google</button>
+
+        <p id="msg"></p>
+
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+        <script src="./auth.js"></script>
+    </div>
+</div>
+
+</body>
+</html>
