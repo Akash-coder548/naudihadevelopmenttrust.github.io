@@ -9,18 +9,23 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 function signup(){
-  auth.createUserWithEmailAndPassword(email.value,password.value)
-  .then(()=>location.href="index.html")
-  .catch(e=>msg.innerText=e.message);
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.createUserWithEmailAndPassword(email, password)
+    .then(()=>location.href="index.html")
+    .catch(err=>document.getElementById("msg").innerText=err.message);
 }
 
 function login(){
-  auth.signInWithEmailAndPassword(email.value,password.value)
-  .then(()=>location.href="index.html")
-  .catch(e=>msg.innerText=e.message);
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  auth.signInWithEmailAndPassword(email, password)
+    .then(()=>location.href="index.html")
+    .catch(err=>document.getElementById("msg").innerText=err.message);
 }
 
-function googleLogin(){
-  auth.signInWithPopup(new firebase.auth.GoogleAuthProvider())
-  .then(()=>location.href="index.html");
+function logout(){
+  auth.signOut().then(()=>location.href="login.html");
 }

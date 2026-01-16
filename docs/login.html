@@ -1,62 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Naudiha Trust Login</title>
+    <title>Login - Naudiha Development Trust</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
-
-    <style>
-        body{
-          background:url("./logo.png") center repeat;
-          background-size:200px;
-          background-color:#e8f5e9;
-        }
-        .overlay{
-          min-height:100vh;
-          background:rgba(255,255,255,0.85);
-          display:flex;
-          flex-direction:column;
-          align-items:center;
-        }
-        .logo-top{
-          width:120px;
-          margin-top:25px;
-        }
-        .login-box{
-          margin-top:30px;
-          background:white;
-          width:90%;
-          max-width:360px;
-          padding:25px;
-          border-radius:15px;
-          box-shadow:0 12px 40px rgba(0,0,0,.35);
-        }
-        .login-box h2{text-align:center;color:#2e7d32}
-        .login-box button{width:100%}
-    </style>
 </head>
+<body class="login-bg">
 
-<body>
-<div class="overlay">
+<div class="login-wrapper">
 
-    <img src="./logo.png" class="logo-top">
+    <img src="./logo.png" class="login-logo">
 
-    <div class="login-box">
+    <div class="login-card">
+
         <h2>Naudiha Development Trust</h2>
+
+        <p class="login-instruction">
+            If this is your first visit, please create an account using <b>Sign Up</b>.
+            After creating your account, log in with your email and password.
+        </p>
 
         <input id="email" placeholder="Email">
         <input id="password" type="password" placeholder="Password">
 
-        <button onclick="login()">Login</button>
-        <button onclick="signup()">Create Account</button>
-        <button onclick="googleLogin()">Continue with Google</button>
+        <button class="btn-primary" onclick="login()">Login</button>
+        <button class="btn-secondary" onclick="signup()">Sign Up</button>
 
         <p id="msg"></p>
 
-        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-        <script src="./auth.js"></script>
     </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+    <script src="./auth.js"></script>
 
 </div>
 </body>

@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<!-- 🔐 LOGIN PROTECTION -->
+<!-- AUTH CHECK -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 <script src="./auth.js"></script>
@@ -21,71 +21,66 @@
 <div class="lang">
     <button onclick="setLang('en')">English</button>
     <button onclick="setLang('hi')">हिन्दी</button>
+    <button class="logout" onclick="logout()">Logout</button>
 </div>
 
-<header>
+<header class="hero">
     <img src="./logo.png" class="logo">
     <h1>Naudiha Development Trust</h1>
     <p>Building a Better Village Together</p>
 </header>
 
-<div class="thanks">
-    🙏 Many thanks to everyone for your support 🙏
-</div>
-
 <section>
-    <h2 data-key="aboutTitle">About Our Trust</h2>
+    <h2 data-key="aboutTitle">Who We Are</h2>
     <p data-key="aboutText">
-        Naudiha Development Trust works for village development, educating children for a better future,
-        and improving infrastructure.
+        Naudiha Development Trust works for village development, education of children,
+        and improvement of basic infrastructure.
     </p>
 </section>
 
 <section>
-    <h2 data-key="improveTitle">How We Can Improve Our Village</h2>
+    <h2 data-key="improveTitle">Our Focus Areas</h2>
     <ul>
-        <li>Cleanliness</li>
-        <li>Education support</li>
-        <li>Infrastructure improvement</li>
-        <li>Road & water development</li>
+        <li>Village cleanliness & awareness</li>
+        <li>Education support for children</li>
+        <li>Road, water & infrastructure</li>
+        <li>Health & social development</li>
     </ul>
 </section>
 
-<!-- 💰 DONATION -->
+<!-- DONATION -->
 <section class="donate-box">
     <div class="donate-left">
-        <img src="./qr.png" class="qr-big" alt="Donation QR">
+        <img src="./qr.png" class="qr-fill">
     </div>
-
     <div class="donate-right">
-        <h2 data-key="donateTitle">Donation</h2>
-        <h3>Total Donation: ₹ <span id="total">0</span></h3>
-
-        <p class="sheet-link">
-            View Donation Records (View Only):<br>
-            <a href="https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g"
-               target="_blank">
-                Open Donation Sheet
-            </a>
+        <h2 data-key="donateTitle">Support Our Mission</h2>
+        <p class="donate-line">
+            आपका छोटा सा दान, हमारे गाँव के बड़े विकास की नींव है।
         </p>
+        <h3>Total Donations Collected: ₹ <span id="total">0</span></h3>
+        <a class="sheet-link" target="_blank"
+           href="https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g">
+            View Donation Records
+        </a>
     </div>
 </section>
 
-<!-- 👥 TEAM -->
+<!-- TEAM -->
 <section>
-    <h2 data-key="teamTitle">Trust Members</h2>
+    <h2 data-key="teamTitle">Trust Leadership</h2>
     <ul class="team">
-        <li>Chief Coordinator – Nitish Kumar – 📞 +91 79705 53182</li>
-        <li>Member – Himanshu Ranjan – 📞 +91 70333 36559</li>
-        <li>Member – Sonu Kumar – 📞 +91 62067 92903</li>
-        <li>Member – Ankit Kumar – 📞 +91 87098 09484</li>
-        <li>Member – Jitendra Kumar – 📞 +91 77382 89950</li>
+        <li><b>Chief Coordinator:</b> Nitish Kumar – 📞 7970553182</li>
+        <li>Himanshu Ranjan – 📞 7033336559</li>
+        <li>Sonu Kumar – 📞 6206792903</li>
+        <li>Ankit Kumar – 📞 8709809484</li>
+        <li>Jitendra Kumar – 📞 7738289950</li>
     </ul>
 </section>
 
-<!-- 📰 EVENTS -->
+<!-- EVENTS -->
 <section>
-    <h2 data-key="eventsTitle">Recent Events</h2>
+    <h2 data-key="eventsTitle">Recent Activities</h2>
     <div class="gallery">
         <img src="./event1.jpg">
         <img src="./event2.jpg">
@@ -93,17 +88,39 @@
     </div>
 </section>
 
-<!-- 📍 MAP -->
+<!-- MAP -->
 <section>
-    <h2 data-key="mapTitle">Our Village Location</h2>
-    <iframe
-            class="map"
-            src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"
-            loading="lazy">
-    </iframe>
+    <h2 data-key="mapTitle">Village Location</h2>
+    <iframe class="map"
+            src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"></iframe>
+</section>
+
+<!-- SUGGESTION -->
+<section>
+    <h2 data-key="suggestTitle">Suggestion Box</h2>
+    <p>Please share your ideas to improve our village.</p>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input name="name" placeholder="Your Name" required>
+        <textarea name="message" placeholder="Your suggestion..." required></textarea>
+        <button>Submit Suggestion</button>
+    </form>
+</section>
+
+<!-- CONTACT US (FIXED & ADDED) -->
+<section>
+    <h2>Contact Us</h2>
+    <p>
+        <strong>Village:</strong> Naudiha, Gaya, Bihar – 824101<br><br>
+        <strong>Phone:</strong><br>
+        📞 7970553182 (Nitish Kumar)<br>
+        📞 7033336559 (Himanshu Ranjan)
+    </p>
 </section>
 
 <footer>© 2026 Naudiha Development Trust</footer>
+
+<a href="https://chat.whatsapp.com/EF0JopuQ6L63h4llEqWOBj"
+   class="whatsapp" target="_blank">WhatsApp</a>
 
 <script src="./script.js"></script>
 </body>
