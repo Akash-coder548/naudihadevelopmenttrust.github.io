@@ -48,7 +48,6 @@
     </ul>
 </section>
 
-<!-- DONATION -->
 <section class="donate-box">
     <div class="donate-left">
         <img src="./qr.png" class="qr-fill">
@@ -66,7 +65,6 @@
     </div>
 </section>
 
-<!-- TEAM -->
 <section>
     <h2 data-key="teamTitle">Trust Leadership</h2>
     <ul class="team">
@@ -78,7 +76,6 @@
     </ul>
 </section>
 
-<!-- EVENTS -->
 <section>
     <h2 data-key="eventsTitle">Recent Activities</h2>
     <div class="gallery">
@@ -88,30 +85,38 @@
     </div>
 </section>
 
-<!-- MAP -->
 <section>
     <h2 data-key="mapTitle">Village Location</h2>
     <iframe class="map"
             src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"></iframe>
 </section>
 
-<!-- SUGGESTION -->
+<!-- ✅ FIXED SUGGESTION BOX -->
 <section>
     <h2 data-key="suggestTitle">Suggestion Box</h2>
     <p>Please share your ideas to improve our village.</p>
-    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+
+    <form class="suggest-form"
+          action="https://formspree.io/f/YOUR_FORM_ID"
+          method="POST">
+
         <input name="name" placeholder="Your Name" required>
-        <textarea name="message" placeholder="Your suggestion..." required></textarea>
-        <button>Submit Suggestion</button>
+
+        <textarea name="message"
+                  placeholder="Your suggestion..."
+                  rows="4"
+                  required></textarea>
+
+        <button type="submit">Submit Suggestion</button>
+
     </form>
 </section>
 
-<!-- CONTACT US (FIXED & ADDED) -->
+<!-- CONTACT -->
 <section>
     <h2>Contact Us</h2>
     <p>
-        <strong>Village:</strong> Naudiha, Gaya, Bihar – 824101<br><br>
-        <strong>Phone:</strong><br>
+        <strong>Village:</strong> Naudiha, Gaya, Bihar – 824101<br>
         📞 7970553182 (Nitish Kumar)<br>
         📞 7033336559 (Himanshu Ranjan)
     </p>

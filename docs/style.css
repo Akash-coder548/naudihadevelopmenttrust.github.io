@@ -4,78 +4,7 @@ body{
   background:#fdf6ee;
 }
 
-/* =====================
-   LOGIN BACKGROUND
-   ===================== */
-.login-bg{
-  min-height:100vh;
-  background:
-    url("./logo.png") repeat;
-  background-size:180px;
-  background-color:#fafafa;
-}
-
-/* LOGIN LAYOUT */
-.login-wrapper{
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-}
-
-.login-logo{
-  width:100px;
-  margin-bottom:15px;
-  background:white;
-  padding:10px;
-  border-radius:12px;
-}
-
-.login-card{
-  background:white;
-  padding:25px;
-  width:90%;
-  max-width:360px;
-  border-radius:12px;
-  box-shadow:0 10px 30px rgba(0,0,0,.25);
-  text-align:center;
-}
-
-.login-instruction{
-  font-size:14px;
-  color:#555;
-  margin-bottom:15px;
-}
-
-.login-card input{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border:1px solid #ccc;
-  border-radius:6px;
-}
-
-.btn-primary,
-.btn-secondary{
-  width:100%;
-  padding:10px;
-  margin-top:10px;
-  background:white;
-  border:1px solid #ccc;
-  border-radius:6px;
-  cursor:pointer;
-}
-
-.btn-primary:hover,
-.btn-secondary:hover{
-  background:#f2f2f2;
-}
-
-/* =====================
-   MAIN WEBSITE STYLES
-   ===================== */
-
+/* HEADER */
 .hero{
   background:#2e7d32;
   color:white;
@@ -85,6 +14,7 @@ body{
 
 .logo{width:120px}
 
+/* SECTIONS */
 section{
   background:white;
   margin:15px;
@@ -93,8 +23,6 @@ section{
 }
 
 h2{color:#2e7d32}
-
-.team li{margin:8px 0}
 
 /* DONATION */
 .donate-box{
@@ -111,6 +39,9 @@ h2{color:#2e7d32}
   font-size:17px;
   color:#555;
 }
+
+/* TEAM */
+.team li{margin:8px 0}
 
 /* GALLERY */
 .gallery{
@@ -149,6 +80,37 @@ h2{color:#2e7d32}
   color:white;
 }
 
+/* ✅ FIXED SUGGESTION FORM */
+.suggest-form{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  max-width:500px;
+}
+
+.suggest-form input,
+.suggest-form textarea{
+  width:100%;
+  padding:10px;
+  border:1px solid #ccc;
+  border-radius:6px;
+  font-size:14px;
+}
+
+.suggest-form button{
+  align-self:flex-start;
+  padding:10px 20px;
+  background:#2e7d32;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.suggest-form button:hover{
+  background:#256428;
+}
+
 /* WHATSAPP */
 .whatsapp{
   position:fixed;
@@ -161,8 +123,50 @@ h2{color:#2e7d32}
   text-decoration:none;
 }
 
+/* LOGIN PAGE */
+.login-bg{
+  background:url("./logo.png") repeat;
+  background-size:180px;
+  min-height:100vh;
+}
+.login-wrapper{
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+}
+.login-logo{
+  width:100px;
+  background:white;
+  padding:10px;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+.login-card{
+  background:white;
+  padding:25px;
+  max-width:360px;
+  width:90%;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+  text-align:center;
+}
+.login-card input{
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+}
+.btn-primary,
+.btn-secondary{
+  width:100%;
+  padding:10px;
+  margin-top:10px;
+  background:white;
+  border:1px solid #ccc;
+  border-radius:6px;
+}
+
 @media(max-width:700px){
-  .donate-box{
-    grid-template-columns:1fr;
-  }
+  .donate-box{grid-template-columns:1fr}
 }
