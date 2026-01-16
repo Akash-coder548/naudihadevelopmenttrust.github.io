@@ -1,5 +1,5 @@
 // 🔄 Auto Donation Fetch
-fetch("PASTE_YOUR_GOOGLE_APPS_SCRIPT_WEBAPP_URL_HERE")
+fetch("https://script.google.com/macros/s/AKfycbyAPMxlilID9I7_7jz6Sx54uyeI-tdk-sVi38AN9iNY7VKZ5isr8g1mNUVyH6lu6NBbTw/exec")
 .then(res => res.text())
 .then(total => document.getElementById("total").innerText = total);
 
