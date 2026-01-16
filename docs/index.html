@@ -8,12 +8,13 @@
 </head>
 <body>
 
+<!-- 🔐 LOGIN PROTECTION -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 <script src="./auth.js"></script>
 <script>
-    firebase.auth().onAuthStateChanged(u=>{
-      if(!u) location.href="login.html";
+    firebase.auth().onAuthStateChanged(user=>{
+      if(!user) window.location.href="login.html";
     });
 </script>
 
@@ -28,46 +29,78 @@
     <p>Building a Better Village Together</p>
 </header>
 
-<div class="thanks">🙏 Many thanks to everyone for your support 🙏</div>
+<div class="thanks">
+    🙏 Many thanks to everyone for your support 🙏
+</div>
 
 <section>
     <h2 data-key="aboutTitle">About Our Trust</h2>
-    <p data-key="aboutText">Naudiha Development Trust works for village development, educating children and improving infrastructure.</p>
+    <p data-key="aboutText">
+        Naudiha Development Trust works for village development, educating children for a better future,
+        and improving infrastructure.
+    </p>
 </section>
 
 <section>
     <h2 data-key="improveTitle">How We Can Improve Our Village</h2>
     <ul>
-        <li>Cleanliness</li><li>School support</li><li>Infrastructure</li><li>Road & Water</li>
+        <li>Cleanliness</li>
+        <li>Education support</li>
+        <li>Infrastructure improvement</li>
+        <li>Road & water development</li>
     </ul>
 </section>
 
+<!-- 💰 DONATION -->
 <section class="donate-box">
-    <div><img src="./qr.png" class="qr-big"></div>
-    <div>
+    <div class="donate-left">
+        <img src="./qr.png" class="qr-big" alt="Donation QR">
+    </div>
+
+    <div class="donate-right">
         <h2 data-key="donateTitle">Donation</h2>
-        <h3>₹ <span id="total">0</span></h3>
-        <a class="sheet-link" href="https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g/request" target="_blank">Request Sheet Access</a>
+        <h3>Total Donation: ₹ <span id="total">0</span></h3>
+
+        <p class="sheet-link">
+            View Donation Records (View Only):<br>
+            <a href="https://docs.google.com/spreadsheets/d/1UighIkhaMEcTK4z6EqC-xoYt9L48MTq6PiqxeDoBF4g"
+               target="_blank">
+                Open Donation Sheet
+            </a>
+        </p>
     </div>
 </section>
 
+<!-- 👥 TEAM -->
 <section>
     <h2 data-key="teamTitle">Trust Members</h2>
     <ul class="team">
-        <li>Nitish Kumar</li><li>Himanshu Ranjan</li><li>Sonu Kumar</li><li>Ankit Kumar</li><li>Jitendra Kumar</li>
+        <li>Chief Coordinator – Nitish Kumar – 📞 +91 79705 53182</li>
+        <li>Member – Himanshu Ranjan – 📞 +91 70333 36559</li>
+        <li>Member – Sonu Kumar – 📞 +91 62067 92903</li>
+        <li>Member – Ankit Kumar – 📞 +91 87098 09484</li>
+        <li>Member – Jitendra Kumar – 📞 +91 77382 89950</li>
     </ul>
 </section>
 
+<!-- 📰 EVENTS -->
 <section>
     <h2 data-key="eventsTitle">Recent Events</h2>
     <div class="gallery">
-        <img src="./event1.jpg"><img src="./event2.jpg"><img src="./event3.jpg">
+        <img src="./event1.jpg">
+        <img src="./event2.jpg">
+        <img src="./event3.jpg">
     </div>
 </section>
 
+<!-- 📍 MAP -->
 <section>
-    <h2 data-key="mapTitle">Our Location</h2>
-    <iframe class="map" src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"></iframe>
+    <h2 data-key="mapTitle">Our Village Location</h2>
+    <iframe
+            class="map"
+            src="https://www.google.com/maps?q=Naudiha,+Gaya,+Bihar+824101&output=embed"
+            loading="lazy">
+    </iframe>
 </section>
 
 <footer>© 2026 Naudiha Development Trust</footer>

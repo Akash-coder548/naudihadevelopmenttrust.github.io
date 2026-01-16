@@ -7,7 +7,7 @@
 
     <style>
         body{
-          background:url("./logo.png") center center repeat;
+          background:url("./logo.png") center repeat;
           background-size:200px;
           background-color:#e8f5e9;
         }
@@ -30,36 +30,15 @@
           padding:25px;
           border-radius:15px;
           box-shadow:0 12px 40px rgba(0,0,0,.35);
-          animation:fadeIn .6s;
         }
         .login-box h2{text-align:center;color:#2e7d32}
-        .login-box input{
-          width:100%;
-          padding:12px;
-          margin:10px 0;
-          border-radius:8px;
-          border:1px solid #ccc;
-        }
-        .login-box button{
-          width:100%;
-          padding:12px;
-          margin:10px 0;
-          border:none;
-          border-radius:8px;
-          background:#2e7d32;
-          color:white;
-          font-size:16px;
-        }
-        .google-btn{
-          background:#db4437;
-        }
-        @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+        .login-box button{width:100%}
     </style>
 </head>
 
 <body>
-
 <div class="overlay">
+
     <img src="./logo.png" class="logo-top">
 
     <div class="login-box">
@@ -69,8 +48,8 @@
         <input id="password" type="password" placeholder="Password">
 
         <button onclick="login()">Login</button>
-        <button onclick="signup()">Create New Account</button>
-        <button class="google-btn" onclick="googleLogin()">Continue with Google</button>
+        <button onclick="signup()">Create Account</button>
+        <button onclick="googleLogin()">Continue with Google</button>
 
         <p id="msg"></p>
 
@@ -78,7 +57,7 @@
         <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
         <script src="./auth.js"></script>
     </div>
-</div>
 
+</div>
 </body>
 </html>
